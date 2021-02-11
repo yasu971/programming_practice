@@ -1,24 +1,39 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Proto Spaceを参考にしてます。
+## users テーブル
 
-Things you may want to cover:
+| Column     | Type   | Options     |
+| ---------- | ------ | ----------- |
+| Nickname   | string | null: false |
+| email      | string | null: false |
+| password   | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :comments
+- has_many :prototypes
 
-* Configuration
+## questions テーブル 問題は、JsvaScript!?
 
-* Database creation
+| Column     | Type         | Options     |
+| ---------- | ------------ | ----------- |
+| title      | string       | null: false |
+| content    | text         | null: false |
+| sentaku    | text         | null: false |
+| user       | references   |             |
 
-* Database initialization
+- belongs_to :users
+- has_many :comments
 
-* How to run the test suite
+## comments テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column    | Type       | Options     |
+| --------- | ---------- | ----------- |
+| text      | text       | null: false |
+| user      | references |             |
+| question  | references |             |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to :users
+- belongs_to :questions
