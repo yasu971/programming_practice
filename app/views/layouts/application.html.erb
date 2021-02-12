@@ -23,6 +23,15 @@
       <div class="navbar">
         <ul class="nav-lists">
 
+    <%# ログインしているときは以下を表示する %>
+      <% if user_signed_in? %>
+      <div class="greeting">
+        <%= "ようこそ、" %>
+        <%= link_to "#{current_user.nickname}さん", class: :greeting__link%>
+      </div>
+      <% end %>
+    <%# // ログインしているときは上記を表示する %>
+
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
