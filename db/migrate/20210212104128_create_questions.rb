@@ -7,6 +7,7 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
       t.string :option2
       t.string :option3
       t.string :option4
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
