@@ -19,7 +19,10 @@
 | ---------- | ------------ | ----------- |
 | title      | string       | null: false |
 | content    | text         | null: false |
-| sentaku    | text         | null: false |
+| option1    | text         | null: false |
+| option2    | text         | null: false |
+| option3    | text         | null: false |
+| option4    | text         | null: false |
 | user       | references   |             |
 
 - belongs_to :users
