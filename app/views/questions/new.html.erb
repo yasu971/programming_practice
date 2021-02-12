@@ -1,0 +1,99 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Programming Practice</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="heading">
+        <h1 class="title">Programming Practice</h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "戻る", questions_index_path, class: "post" %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path, class: "post" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+          </div>
+        <% end %>        
+        </ul>
+      </div>
+    </header>
+
+      <%# ここから、本文！！ %>
+            <%# <p><%= link_to "問い1(ruby)", questions_index_path, class: "post" %></p>
+          <%# <p><a href= "query1.html" >問い1</a></p> %>
+            
+<h2>HTMLとは何かを振り返ろう</h2>
+
+<p>次の選択肢の中から、<strong>HTML</strong>について適切な説明をしているものを選びましょう。</p>
+<p>
+1. ウェブサイトに表示される情報を記載する言語<br>
+2. 大きなWebアプリケーションから小さなプログラムまで、さまざまなソフトウェアを作ることができる言語<br>
+3. Webアプリケーションのなかで、様々な情報を保存することができる言語<br>
+4. コードの記述量が短くシンプルで、素早くWebアプリケーションが作れる言語<br>
+</p>
+
+<p>次の選択肢の中から、<strong>CSS</strong>について適切な説明をしているものを選びましょう。</p>
+
+<p>
+1. ファイルの種類を識別するためにファイル末尾につける文字列のこと<br>
+2. プログラミング言語で書かれたテキストやファイルのこと<br>
+3. グラフィックを用いて操作を行う仕組みのこと<br>
+4. PCに命令をすることができるツールのこと<br>
+</p>
+
+<%# <input id="expert_exam_response_items_attributes_1_expert_exam_question_item_id" name="expert_exam_response[items_attributes][1][expert_exam_question_item_id]" type="hidden" value="1007" /><div class="expert-exam_form-last"><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="1" />1</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="2" />2</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="3" />3</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="4" />4</label></div></div>問題.3<h2>拡張子について振り返ろう</h2> %>
+
+<p>次の選択肢の中から、拡張子について適切な説明をしているものを選びましょう。</p>
+
+<p>
+1. ファイルの種類を識別するためにファイル末尾につける文字列のこと<br>
+2. プログラミング言語で書かれたテキストやファイルのこと<br>
+3. グラフィックを用いて操作を行う仕組みのこと<br>
+4. PCに命令をすることができるツールのこと<br>
+</p>
+
+
+
+<h1>模範解答</h1>
+
+<h2>問題1の解答</h2>
+1<br>
+解説<br>
+HTMLは、Webサイトやアプリケーションなどの画面上に表示する文字、画像、リンクなどの情報を記載する言語です。
+
+<h2>問題2の解答</h2>
+3<br>
+解説<br>
+CSSは、Webページの文字の大きさや色を装飾するための言語です。他にも背景の色や、レイアウトなども指定することができます。
+
+<h2>問題3の解答</h2>
+1<br>
+解説<br>
+拡張子とは、ファイルの種類を識別するために、ファイル末尾につける文字列のことです。
+HTMLのファイルであれば.html、CSSのファイルであれば.cssとなります。
+
+
+
+
+    <div class="contents">
+      <div class="first-view">
+            <%# <%= link_to image_tag("hero.jpg", class: :logo), root_path %>
+      </div>
+        </ul>
+
+    </div>
+  <p>  </p>
+  </body>
+
+</html>
