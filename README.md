@@ -18,11 +18,11 @@
 | Column     | Type         | Options     |
 | ---------- | ------------ | ----------- |
 | title      | string       | null: false |
-| content    | text         | null: false |
-| option1    | text         | null: false |
-| option2    | text         | null: false |
-| option3    | text         | null: false |
-| option4    | text         | null: false |
+| content    | string       | null: false |
+| option1    | string       | null: false |
+| option2    | string       | null: false |
+| option3    | string       | null: false |
+| option4    | string       | null: false |
 | user       | references   |             |
 
 - belongs_to :users
