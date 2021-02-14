@@ -4,63 +4,29 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Programming Practice</title>
+    <h2>問題ページ</h2>
   </head>
 
   <body>
 
-      <%# ここから、本文！！ %>
-            
-<h2>HTMLとは何かを振り返ろう</h2>
-
-<p>次の選択肢の中から、<strong>HTML</strong>について適切な説明をしているものを選びましょう。</p>
-<p>
-1. ウェブサイトに表示される情報を記載する言語<br>
-2. 大きなWebアプリケーションから小さなプログラムまで、さまざまなソフトウェアを作ることができる言語<br>
-3. Webアプリケーションのなかで、様々な情報を保存することができる言語<br>
-4. コードの記述量が短くシンプルで、素早くWebアプリケーションが作れる言語<br>
-</p>
-
-<p>次の選択肢の中から、<strong>CSS</strong>について適切な説明をしているものを選びましょう。</p>
-
-<p>
-1. ファイルの種類を識別するためにファイル末尾につける文字列のこと<br>
-2. プログラミング言語で書かれたテキストやファイルのこと<br>
-3. グラフィックを用いて操作を行う仕組みのこと<br>
-4. PCに命令をすることができるツールのこと<br>
-</p>
-
-<%# <input id="expert_exam_response_items_attributes_1_expert_exam_question_item_id" name="expert_exam_response[items_attributes][1][expert_exam_question_item_id]" type="hidden" value="1007" /><div class="expert-exam_form-last"><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="1" />1</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="2" />2</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="3" />3</label></div><div class="expert-exam_form-checkbox"><label class="answer_label"><input id="expert_exam_response_items_attributes_1_answer_option" name="expert_exam_response[items_attributes][1][answer_option]" type="checkbox" value="4" />4</label></div></div>問題.3<h2>拡張子について振り返ろう</h2> %>
-
-<p>次の選択肢の中から、拡張子について適切な説明をしているものを選びましょう。</p>
-
-<p>
-1. ファイルの種類を識別するためにファイル末尾につける文字列のこと<br>
-2. プログラミング言語で書かれたテキストやファイルのこと<br>
-3. グラフィックを用いて操作を行う仕組みのこと<br>
-4. PCに命令をすることができるツールのこと<br>
-</p>
-
-
-
-<h1>模範解答</h1>
-
-<h2>問題1の解答</h2>
-1<br>
-解説<br>
-HTMLは、Webサイトやアプリケーションなどの画面上に表示する文字、画像、リンクなどの情報を記載する言語です。
-
-<h2>問題2の解答</h2>
-3<br>
-解説<br>
-CSSは、Webページの文字の大きさや色を装飾するための言語です。他にも背景の色や、レイアウトなども指定することができます。
-
-<h2>問題3の解答</h2>
-1<br>
-解説<br>
-拡張子とは、ファイルの種類を識別するために、ファイル末尾につける文字列のことです。
-HTMLのファイルであれば.html、CSSのファイルであれば.cssとなります。
-
-    
+<% @questions.each do |question| %>
+  <div>
+    <div>
+      問題<%= question.id %><br/>
+    </div>
+    <div>
+      <%= question.title %><br/>
+      <%= question.content %><br/>
+    </div>
+    <div>
+      1.<%= question.option1 %><br/>
+      2.<%= question.option2 %><br/>
+      3.<%= question.option3 %><br/>
+      4.<%= question.option4 %><br/>
+      <br/>
+    </div>    
+  </div>
+<% end %>
+    <%= link_to "解答、解説へ", questions_answer_path %>
   </body>
-
 </html>
