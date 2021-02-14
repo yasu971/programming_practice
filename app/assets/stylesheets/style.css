@@ -43,6 +43,15 @@ li{
   list-style: none;
 }
 
+/* フッター */
+footer {
+  height: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: gray;
+}
+
+
 /* first-viewクラスからbottom-contentクラスまでの要素の親要素 */
 /* 以下不要な部分削除済*/
 
@@ -53,11 +62,4 @@ li{
 /* フォーム 以下不要な部分削除済*/
 
 
-/* フッター */
-footer {
-  height: 50px;
-  background-color: #f0f0f0;
-  text-align: center;
-  color: gray;
-}}
 
