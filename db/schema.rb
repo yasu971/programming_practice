@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2021_02_12_104128) do
     t.string "option2"
     t.string "option3"
     t.string "option4"
+    t.string "answer"
+    t.string "commentary"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
