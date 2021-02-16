@@ -3,13 +3,17 @@ class QuestionsController < ApplicationController
   def index
   end
 
-  def new
+  def index2
     @questions = Question.all
   end
+  
+  # def new
+  #   @questions = Question.all
+  # end
 
-  def new2
+  def new
     @question = Question.new
-end
+  end
 
   def answer
     @questions = Question.all
