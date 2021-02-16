@@ -35,8 +35,8 @@
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "Practice", new_question_path, class: "post" %>
-            <%= link_to "New Practice", questions_new2_path, class: "post" %>
+            <%= link_to "Practice", questions_index2_path, class: "post" %>
+            <%= link_to "New Practice", new_question_path, class: "post" %>
           </div>
         <% else %>
           <div class="grid-6">
