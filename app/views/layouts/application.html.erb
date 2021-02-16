@@ -28,6 +28,7 @@
       <div class="greeting">
         <%= "ようこそ、" %>
         <%= link_to "#{current_user.nickname}さん", class: :greeting__link%>
+        <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: :greeting__link%>
       </div>
       <% end %>
     <%# // ログインしているときは上記を表示する %>
@@ -41,8 +42,8 @@
           </div>
         <% else %>
           <div class="grid-6">
-            <%= link_to "Log in", new_user_session_path, class: "post" %>
-            <%= link_to "Sign up", new_user_registration_path, class: "post" %>
+            <%= link_to "Log in", new_user_session_path, class: :nav__btn %>
+            <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
           </div>
         <% end %>        
         </ul>
