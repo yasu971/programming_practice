@@ -14,10 +14,10 @@
 
   <body>
 
-    <header>
+    <header class="header">
       <div class="heading">
         <h1 class="title">
-            <%= link_to "Programming Practice", root_path %>
+            <%= link_to "Programming Practice", root_path, class: :nav__btn %>
         </h1>
       </div>
       <div class="navbar">
@@ -34,9 +34,10 @@
 
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "Practice", questions_index2_path, class: "post" %>
-            <%= link_to "New Practice", new_question_path, class: "post" %>
+
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+            <%= link_to "Practice", questions_index2_path, class: :nav__btn %>
+            <%= link_to "New Practice", new_question_path, class: :nav__btn %>
           </div>
         <% else %>
           <div class="grid-6">
@@ -50,7 +51,7 @@
 
     <%= yield %>
   </body>
-  <footer>
+    <footer class="footer">
   <p>Copyright(C) Programming Practice ALL RIGHTS RESERVED.</p>
 </footer>
   
