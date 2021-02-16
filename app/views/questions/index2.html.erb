@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Programming Practice</title>
+    <h2>問題ページ</h2>
+  </head>
+
+  <body>
+
+<% @questions.each do |question| %>
+  <div>
+    <div>
+      問題<%= question.id %><br/>
+    </div>
+    <div>
+      <%= question.title %><br/>
+      <%= question.content %><br/>
+    </div>
+    <div>
+      1.<%= question.option1 %><br/>
+      2.<%= question.option2 %><br/>
+      3.<%= question.option3 %><br/>
+      4.<%= question.option4 %><br/>
+      <br/>
+    </div>    
+  </div>
+<% end %>
+    <%= link_to "解答、解説へ", questions_answer_path %>
+
+  </body>
+  
+</html>
