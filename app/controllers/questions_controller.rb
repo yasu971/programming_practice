@@ -7,11 +7,28 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
+  def new2
+    @question = Question.new
+end
+
   def answer
     @questions = Question.all
   end
 
+  def create
+    @question = Question.create(question_params)
+    if @question.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
 
+  private
+  def question_params
+    params.require(:question).permit(:title, :content, :option1, :option2, :option3, :option4, :answer, :commentary).merge(user_id: current_user.id)
+  end
+  
 end
 
 # 「protospace-31747/app/controllers/prototypes_controller.rb」をコピー
