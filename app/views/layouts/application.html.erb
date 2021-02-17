@@ -15,37 +15,33 @@
   <body>
 
     <header class="header">
-      <div class="heading">
-        <h1 class="title">
-            <%= link_to "Programming Practice", root_path, class: :nav__btn %>
-        </h1>
-      </div>
-      <div class="navbar">
-        <ul class="nav-lists">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
 
-    <%# ログインしているときは以下を表示する %>
+            <h1><%= link_to "Programming Practice", root_path %></h1>
+          </div>
+
       <% if user_signed_in? %>
-      <div class="greeting">
+      <div class="nav__left">
         <%= "ようこそ、" %>
         <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: :greeting__link%>
       </div>
       <% end %>
-    <%# // ログインしているときは上記を表示する %>
-
+          
         <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-
+            <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-            <%= link_to "Practice", questions_index2_path, class: :nav__btn %>
-            <%= link_to "New Practice", new_question_path, class: :nav__btn %>
-          </div>
+              <%= link_to "Practice", questions_index2_path, class: :nav__btn %>
+              <%= link_to "New Practice", new_question_path, class: :nav__btn %>
+            </div>
         <% else %>
-          <div class="grid-6">
-            <%= link_to "Log in", new_user_session_path, class: :nav__btn %>
-            <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
-          </div>
-        <% end %>        
-        </ul>
+            <div class="nav__right">
+            <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            </div>
+        <% end %>
+        </div>
       </div>
     </header>
 
