@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   resources :questions, only: [:index, :new, :create]
   # resources :hoge, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+
+  resources :users, only: :show
+  
 end
