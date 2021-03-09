@@ -17,7 +17,9 @@ https://programming-practice-1421.herokuapp.com/
 ITエンジニアを目指す方に無料で学習出来るサイトが必要だと感じたため。
 
 ## DEMO
-![デモ画像](./app/assets/images/demo.jpg)
+![デモ画像1](./app/assets/images/demo.jpg)
+
+![デモ画像2](./app/assets/images/demo.gif)
 
 
 ## 工夫したポイント:
