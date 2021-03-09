@@ -10,7 +10,7 @@ https://programming-practice-1421.herokuapp.com/
 ## 制作背景(意図)：
 ITエンジニアを目指す方に無料で学習出来るサイトが必要だと感じたため。
 
-## DEMO(gif動画)
+## DEMO
 ![デモ画像](./app/assets/images/demo.jpg)
 
 
