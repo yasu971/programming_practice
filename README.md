@@ -28,10 +28,10 @@ ITエンジニアを目指す方に無料で学習出来るサイトが必要だ
 ・問題投稿画面
 ![デモ画像3](./app/assets/images/demo3.gif)
 
-・問題編集画面
-![デモ画像4](./app/assets/images/demo3.gif)
+・問題編集
+![デモ画像4](./app/assets/images/demo4.gif)
 
-・問題削除画面
+・問題削除
 ![デモ画像5](./app/assets/images/demo3.gif)
 
 
