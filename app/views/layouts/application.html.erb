@@ -18,8 +18,9 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-
-            <h1><%= link_to "Programming Practice", root_path %></h1>
+            <h1>
+            <%= link_to "Programming Practice", root_path, class: :line%>
+            </h1>
           </div>
 
       <% if user_signed_in? %>
